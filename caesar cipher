@@ -1,0 +1,17 @@
+import java.util.*;
+class Q7{
+public static void main(String[] args){
+Scanner s = new Scanner(System.in);
+System.out.println("Enter plain text: ");
+String str = s.nextLine();
+System.out.println("Enter shift by: ");
+int shift = s.nextInt();
+String data = "abcdefghijklmnopqrstuvwxyz";
+String ans = "";
+for(int i = 0; i<str.length();i++ ){
+int index = data.indexOf(str.charAt(i));
+ans = ans +data.charAt((index+shift)%26);
+}
+System.out.println("Encrypted text is: "+ ans);
+}
+}
