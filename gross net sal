@@ -1,0 +1,21 @@
+import java.util.*;
+class Q3{
+public static void main(String[] args){
+String empname,empno;
+float basic,da,hra,cca = 240,pf,pt= 100;
+Scanner s = new Scanner(System.in);
+System.out.println("Enter employee name:");
+empname = s.next();
+System.out.println("Enter employee ID:");
+empno = s.next();
+System.out.println("Enter Basic: ");
+basic = s.nextFloat();
+da = 0.7f*basic;
+hra = 0.3f*basic;
+pf = 0.1f*basic;
+float gross = basic+da+hra+cca;
+float net = basic-pf-pt;
+System.out.println("Gross salary is:"+gross);
+System.out.println("Net salary is: "+net);
+}
+}
