@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Exp6_JSL {
+    public static void main(String[] args) {
+        int[] a = {-1, 2, 3, 4, 5};
+        Arrays.sort(a);
+        boolean GreaterIsMissing = false;
+        boolean lesserIsMissing = false;
+        for (int i = 1; i < a.length - 1; i++){
+            if (a[i] != a[i+1]-1){
+                GreaterIsMissing = true;
+            }
+            else if(a[i] != a[i-1]+1){
+            lesserIsMissing = true;
+        }
+            int num = a[i];
+        if (GreaterIsMissing){
+            System.out.println("The missing number is " + (num + 1));
+            break;
+        }
+        else if (lesserIsMissing){
+            System.out.println("The missing number is " + (num -1));
+            break;
+        }
+        }
+    }
+}
