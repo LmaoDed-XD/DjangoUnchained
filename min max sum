@@ -1,0 +1,23 @@
+import java.util.*;
+class Q2{
+public static void main(String [] args){
+int[] arr = new int[5];
+Scanner s = new Scanner(System.in);
+System.out.println("Enter 5 numbers: ");
+for (int i= 0; i<5 ;i++){
+arr[i] = s.nextInt();
+}
+Arrays.sort(arr);
+long min = 0;
+long max = 0;
+int x = 4;
+int y = 0;
+for (int j= 0; j<4 ;j++){
+min = min + arr[y];
+max = max + arr[x];
+y = y+1;
+x = x-1;
+}
+System.out.println("min: " + min + " " + "max: " + max);
+}
+}
